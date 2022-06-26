@@ -1,0 +1,28 @@
+{
+
+  "scripts": {
+
+    "cypress:open": "cypress open"
+
+  },
+
+  "dependencies": {
+
+    "@badeball/cypress-cucumber-preprocessor": "latest",
+
+    "@cypress/webpack-preprocessor": "latest",
+
+    "csv-parse": "^5.2.0",
+
+    "cypress": "latest",
+
+    "ts-loader": "latest",
+
+    "typescript": "latest",
+
+    "webpack": "latest"
+
+  }
+
+}
+
