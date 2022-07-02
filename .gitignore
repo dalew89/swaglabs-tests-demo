@@ -1,5 +1,5 @@
 node_modules
 .vscode/launch.json
 **/.DS_Store
-**/videos
-**/screenshots
+cypress/videos
+cypress/screenshots
