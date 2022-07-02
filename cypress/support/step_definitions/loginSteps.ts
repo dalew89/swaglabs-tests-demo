@@ -2,16 +2,15 @@
 import { Given, When, Then, Step } from "@badeball/cypress-cucumber-preprocessor"
 import { actor } from "../actor/Actor"
 
-Given("the user is on the swaglabs website", () => {
+Given("the user is on the swaglabs login page", () => {
     actor.navigateTo("https://saucedemo.com")      
 });
 
-Given(`the user is logged in with details {string} and {string} as their username and password`, function (username: string, password: string) {
-    Step(this, `the user enters '${username}' as a username`);
-    Step(this, `the user enters '${password}' as a password`);
-    Step(this, `the user clicks the login button`);
-    actor.isLoggedIn()
-});
+When("the user logs in with a {string} account", (name:string) =>{
+    let userData = actor.user.getUserByName(name)
+    actor.loginTask.login(userData!.username, userData!.password)
+
+})
 
 When("the user enters {string} as a username", (username: string) => { 
     actor.loginTask.enterUsername(username)

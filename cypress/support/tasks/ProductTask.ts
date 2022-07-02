@@ -1,11 +1,10 @@
-// import { Given, When, Then } from "@badeball/cypress-cucumber-preprocessor";
 import { ProductScreen } from "../screens/ProductScreen";
 import { CommonTask } from "./CommonTask";
 
 export class ProductTask {
     readonly commonTask: CommonTask = new CommonTask();
 
-    getItemDescription(itemName: string, description) {
+    getItemDescription(itemName: string, description: string) {
         cy.get((ProductScreen.inventoryItemName)).contains(itemName)
             .parentsUntil(ProductScreen.inventoryItemBox)
             .within(() => {

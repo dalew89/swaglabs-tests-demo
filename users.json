@@ -1,0 +1,19 @@
+{
+    "users": [
+        {
+            "name": "standard",
+            "username": "standard_user",
+            "password": "secret_sauce"
+        },
+        {
+            "name": "locked",
+            "username": "locked_out_user",
+            "password": "secret_sauce"
+        },
+        {
+            "name": "problem",
+            "username": "problem_user",
+            "password": "secret_sauce"
+        }
+    ]
+}
